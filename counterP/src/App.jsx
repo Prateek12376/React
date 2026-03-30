@@ -14,7 +14,7 @@ function App() {
     console.log("value added", counter)
     // counter=counter+1
     setCounter(counter<20?counter+1: counter)
-  }
+  } 
 
   const decreaseV = ()=>{
     console.log("value subtracted",counter)
