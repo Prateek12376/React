@@ -19,8 +19,12 @@ function App() {
   const decreaseV = ()=>{
     console.log("value subtracted",counter)
     // counter=counter-1
-    setCounter(counter>0?counter-1: counter)
+    // setCounter(counter>0?counter-1: counter)  // if we use it multiple time still subtract 1 only , becuase it uses , snapshot that has come at starting, the renders 
+    setCounter((prevcounter)=> prevcounter-1)  // if we use it multiple times suppose 3  rties , then update will be -3, becz here we are doing by function , in this it occur step by step , and step is depends on prev step , and in the end , it rerender
   }
+
+//   All setState calls are queued first, then React renders once.
+// If we use functional updates, each update uses the latest value from the queue, so total change becomes -3 (if called 3 times).”
 
   return (
     <>
