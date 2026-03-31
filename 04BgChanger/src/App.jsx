@@ -16,7 +16,7 @@ function App() {
           gap-3 shadow-lg bg-white  px-3 py-2 rounded-3xl">
 
             <button
-            onClick={()=>setColor("red")}
+            onClick={()=>setColor("red")}  // here used ()=> because onclick uses frunction , so we are using callback function ,we pass a function (callback) so that setColor("red") runs only on click
             className="outline-none px-4 py-1 rounded-full text-white shadow-lg"
             style={{backgroundColor :"red"}}
             >Red</button>
