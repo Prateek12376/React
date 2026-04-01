@@ -94,3 +94,18 @@ function App() {
 }
 
 export default App
+
+
+{/*User action (type/select)
+        ↓
+Event handler in InputBox
+        ↓
+Calls function received via props
+        ↓
+App.jsx updates state (useState)
+        ↓
+React re-renders
+        ↓
+Updated props sent to InputBox
+        ↓
+UI updates on screen*/} 
